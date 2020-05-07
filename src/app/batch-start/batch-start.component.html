@@ -1,0 +1,59 @@
+
+<div [hidden]="submitted">
+  <h1>New Batch</h1>
+  <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name"
+              required
+              [(ngModel)]="batch.name" name="name"
+              #name="ngModel">
+      <div [hidden]="name.valid || name.pristine"
+            class="alert alert-danger">
+        Name is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="desc">Description</label>
+      <input type="text" class="form-control" id="desc"
+              [(ngModel)]="batch.description" name="desc">
+    </div>
+
+    <div class="form-group">
+      <label for="category">Type</label>
+      <select class="form-control" id="category"
+              required
+              [(ngModel)]="batch.category" name="category"
+              #category="ngModel">
+        <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+      </select>
+      <div [hidden]="category.valid || category.pristine" class="alert alert-danger">
+        Type is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="brewDate">Brew Date</label>
+      <input type="text" class="form-control" id="brewDate"
+              required
+              [(ngModel)]="batch.brewDate" name="brewDate"
+              #name="ngModel">
+    </div>
+
+    <div class="form-group">
+      <label for="kitVendor">Type</label>
+      <select class="form-control" id="kitVendor"
+              required
+              [(ngModel)]="batch.kitVendor" name="kitVendor"
+              #category="ngModel">
+        <option *ngFor="let kitVendor of kitVendors" [value]="kitVendor">{{kitVendor}}</option>
+      </select>
+      
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+    
+  
+  </form>
+</div>

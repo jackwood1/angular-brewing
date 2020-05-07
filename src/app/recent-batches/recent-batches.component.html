@@ -1,0 +1,16 @@
+<div *ngFor="let recentBrew of recentBrews">
+  
+  <h3>
+    <a [title]="recentBrew.title  + ' details'" [routerLink]="['/batch', brew_id]">
+      {{ recentBrew.title }}
+    </a>
+  </h3>
+
+  <p *ngIf="recentBrew.brewed">
+    Brewed on {{ recentBrew.brewed }}
+  </p>
+  
+  <p *ngIf="recentBrew.description">
+    Description: {{ recentBrew.description }}
+  </p>
+</div>

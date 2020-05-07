@@ -1,0 +1,35 @@
+[
+  {
+    "category": "Red Wine",
+    "title": "Pinot Nior April 2020",
+    "brew_id": 1,
+    "description": "Awesomeness",
+    "created": "04/01/2020",
+    "brewed": "04/04/2020",
+    "updated": "04/02/2020",
+    "user": 1,
+    "group": 1
+  },
+  {
+    "category": "Red Wine",
+    "title": "Cab April 2020",
+    "brew_id": 2,
+    "description": "besty",
+    "created": "05/01/2020",
+    "brewed": "04/04/2020",
+    "updated": "05/02/2020",
+    "user": 1,
+    "group": 1
+  },
+  {
+    "category": "Hefewiezen",
+    "title": "Hefewiezen April 2020",
+    "brew_id": 3,
+    "description": "Devon's",
+    "created": "04/28/2020",
+    "brewed": "04/04/2020",
+    "updated": "04/29/2020",
+    "user": 2,
+    "group": 1
+  }
+]
